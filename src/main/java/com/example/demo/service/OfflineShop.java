@@ -20,7 +20,7 @@ public class OfflineShop {
 
     @PostConstruct
     public void init(){
-        log.info("Offline shop c with {} rose and {} tulip", rose.getColor(), tulip.getColor());
+        log.info("Offline shop created with {} rose and {} tulip", rose.getColor(), tulip.getColor());
     }
 
     @PreDestroy

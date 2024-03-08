@@ -21,7 +21,7 @@ public class OnlineShop {
 
     @PostConstruct
     public void init() {
-        log.info("Online shop  with {} rose and {} tulip", rose.getColor(), tulip.getColor());
+        log.info("Online shop created with {} rose and {} tulip", rose.getColor(), tulip.getColor());
     }
 
     @PreDestroy
