@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import com.example.demo.flowers.Tulip;
 import com.example.demo.flowers.Rose;
-import com.example.demo.interfaces.Flower;
+import com.example.demo.flowers.Flower;
 
 
 @Configuration

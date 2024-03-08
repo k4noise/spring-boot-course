@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import lombok.extern.log4j.Log4j2;
-import com.example.demo.interfaces.Flower;
+import com.example.demo.flowers.Flower;
 
 
 @Service

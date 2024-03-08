@@ -1,4 +1,4 @@
-package com.example.demo.interfaces;
+package com.example.demo.flowers;
 
 public interface Flower {
     String getColor();
