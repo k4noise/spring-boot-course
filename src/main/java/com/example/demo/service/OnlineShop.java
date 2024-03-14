@@ -7,7 +7,6 @@ import jakarta.annotation.PreDestroy;
 import lombok.extern.log4j.Log4j2;
 import com.example.demo.flowers.Flower;
 
-
 @Service
 @Log4j2
 public class OnlineShop {

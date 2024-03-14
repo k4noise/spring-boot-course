@@ -6,7 +6,6 @@ import com.example.demo.flowers.Tulip;
 import com.example.demo.flowers.Rose;
 import com.example.demo.flowers.Flower;
 
-
 @Configuration
 public class ShopConfig {
 

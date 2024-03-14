@@ -1,6 +1,5 @@
 package com.example.demo.flowers;
 
-
 public class Tulip implements Flower {
     private final String color;
 
