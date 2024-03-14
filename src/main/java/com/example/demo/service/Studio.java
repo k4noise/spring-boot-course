@@ -2,25 +2,27 @@ package com.example.demo.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
 import lombok.extern.log4j.Log4j2;
 import com.example.demo.flowers.Flower;
 
 @Service
 @Log4j2
+@FieldDefaults(level= AccessLevel.PRIVATE)
 public class Studio {
-    private Flower rose;
-    private Flower tulip;
+    Flower rose;
+    Flower tulip;
 
     @Autowired
-    public void setRose(@Qualifier(value = "rose") Flower rose) {
+    public void setRose(Flower rose) {
         this.rose = rose;
     }
 
     @Autowired
-    public void setTulip(@Qualifier(value = "tulip") Flower tulip) {
+    public void setTulip(Flower tulip) {
         this.tulip = tulip;
     }
 

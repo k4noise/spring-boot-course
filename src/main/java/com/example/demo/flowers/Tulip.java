@@ -1,14 +1,13 @@
 package com.example.demo.flowers;
 
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.experimental.FieldDefaults;
+
+@AllArgsConstructor
+@FieldDefaults(makeFinal=true, level= AccessLevel.PRIVATE)
+@Getter
 public class Tulip implements Flower {
-    private final String color;
-
-    public Tulip(String color) {
-        this.color = color;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
-    }
+    String color;
 }

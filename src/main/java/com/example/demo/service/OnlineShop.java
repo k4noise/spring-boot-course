@@ -1,22 +1,21 @@
 package com.example.demo.service;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import lombok.RequiredArgsConstructor;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
 import lombok.extern.log4j.Log4j2;
 import com.example.demo.flowers.Flower;
 
 @Service
 @Log4j2
+@RequiredArgsConstructor
+@FieldDefaults(makeFinal=true, level= AccessLevel.PRIVATE)
 public class OnlineShop {
-    private final Flower rose;
-    private final Flower tulip;
-
-    public OnlineShop(@Qualifier(value = "rose") Flower rose, @Qualifier(value = "tulip") Flower tulip) {
-        this.rose = rose;
-        this.tulip = tulip;
-    }
+    Flower rose;
+    Flower tulip;
 
     @PostConstruct
     public void init() {
