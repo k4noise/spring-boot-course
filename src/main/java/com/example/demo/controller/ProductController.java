@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.controller.dto.ProductDto;
-import com.example.demo.service.common.Product;
+import com.example.demo.controller.dto.RequestProductDto;
+import com.example.demo.controller.dto.ResponseProductDto;
 import com.example.demo.service.ProductService;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -16,7 +16,7 @@ public class ProductController {
     ProductService service;
 
     @PostMapping("/info")
-    public Product getProductWithId(@RequestBody ProductDto product) {
+    public ResponseProductDto getProductWithId(@RequestBody RequestProductDto product) {
         return service.getProductWithId(product);
     }
 

@@ -1,8 +1,8 @@
 package com.example.demo.service;
 
-import com.example.demo.controller.dto.ProductDto;
-import com.example.demo.service.common.Product;
-import com.example.demo.service.common.ProductInfo;
+import com.example.demo.controller.dto.RequestProductDto;
+import com.example.demo.controller.dto.ResponseProductDto;
+import com.example.demo.controller.dto.ResponseProductInfoDto;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
@@ -13,10 +13,10 @@ import java.util.Random;
 public class ProductService {
     Random randomIdGenerator = new Random();
 
-    public Product getProductWithId(ProductDto productData) {
+    public ResponseProductDto getProductWithId(RequestProductDto productData) {
         Long randomId = generateRandomId();
-        ProductInfo info = new ProductInfo(randomId, productData.info().date());
-        return new Product(productData.price(), info);
+        ResponseProductInfoDto info = new ResponseProductInfoDto(randomId, productData.info().date());
+        return new ResponseProductDto(productData.price(), info);
     }
 
     private Long generateRandomId() {
