@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class CustomExceptionAdvice {
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> handleCustomException(Exception exception) {
+    public ResponseEntity<Object> handleCustomException(Exception exception) {
         return ResponseEntity
                 .status(HttpStatus.BAD_GATEWAY)
                 .body("This is my custom 502 error: " + exception.getLocalizedMessage());

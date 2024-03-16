@@ -6,10 +6,7 @@ import com.example.demo.service.ProductService;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/product")
@@ -21,5 +18,10 @@ public class ProductController {
     @PostMapping("/info")
     public Product getProductWithId(@RequestBody ProductDto product) {
         return service.getProductWithId(product);
+    }
+
+    @GetMapping("/wrong")
+    public void getWrongProduct() {
+        throw new RuntimeException("Wrong product given");
     }
 }
