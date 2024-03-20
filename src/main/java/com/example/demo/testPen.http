@@ -1,0 +1,26 @@
+### Right pen
+POST http://localhost:8080/isCorrectPen
+Content-Type: application/json
+
+{
+  "name": "pen",
+  "inkColor": "black",
+  "thickness": "10"
+}
+
+### Wrong pen
+
+POST http://localhost:8080/isCorrectPen
+Content-Type: application/json
+
+{
+"inkColor": "color",
+"thickness": "100"
+}
+
+
+
+
+
+
+
