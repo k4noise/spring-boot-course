@@ -1,0 +1,6 @@
+app:
+  name: "Holy App test mode"
+  saints:
+    - "Veles"
+    - "Svarog"
+  env: ${EXAMPLE_TEST:default}
