@@ -4,7 +4,7 @@ import com.example.demo.common.FirstBean;
 import com.example.demo.common.SecondBean;
 import com.example.demo.common.ThirdBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -24,7 +24,7 @@ public class BeansConfig {
     }
 
     @Bean
-    @ConditionalOnProperty(name = "app.env", havingValue = "default", matchIfMissing = true)
+    @ConditionalOnExpression("#{ '${app.env}' != 'default' }")
     public ThirdBean thirdBean() {
         return new ThirdBean();
     }
