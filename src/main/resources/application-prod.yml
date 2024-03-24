@@ -1,0 +1,6 @@
+app:
+  name: "Holy App"
+  saints:
+    - "Perun"
+    - "Stribog"
+  env: ${EXAMPLE_TEST:default}

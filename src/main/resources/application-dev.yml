@@ -1,0 +1,7 @@
+app:
+  name: "Holy App dev mode"
+  saints:
+    - "Yarilo"
+    - "Veles"
+    - "Perun"
+  env: ${EXAMPLE_TEST:default}
